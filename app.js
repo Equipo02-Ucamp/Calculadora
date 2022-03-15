@@ -8,6 +8,11 @@ calculadora();
 function pedirNumeros(){
     for(let i = 0; i < 2; i++){
         numeros[i] = parseInt(prompt('Inserte el numero'));
+        if(isNaN(numeros[i])){
+            alert('Ingrese solo numeros');
+            pedirNumeros();
+            return;
+        }
     }
 }
 
@@ -23,7 +28,7 @@ function calculadora(){
             let total = numeros[0] + numeros[1];
             alert(`El total de la suma es: ${total}`)
             break;
-    
+        
         default:
             break;
     }
