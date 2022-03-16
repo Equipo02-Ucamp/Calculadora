@@ -28,7 +28,12 @@ function calculadora(){
         case 1:
             total = numeros[0] + numeros[1];
             alert(`El total de la suma es: ${total}`)
-            break;
+        break;
+
+        case 2:
+            total = numeros[0] - numeros[1];
+            alert(`El total de la resta es: ${total}`)
+        break;
         
         default:
             break;
