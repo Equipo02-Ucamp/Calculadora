@@ -1,4 +1,5 @@
 let numeros = [];
+let total;
 
 
 
@@ -25,7 +26,7 @@ function calculadora(){
     }
     switch (operacion) {
         case 1:
-            let total = numeros[0] + numeros[1];
+            total = numeros[0] + numeros[1];
             alert(`El total de la suma es: ${total}`)
             break;
         
