@@ -18,12 +18,11 @@ function pedirNumeros() {
 }
 
 function calculadora() {
-    let operacion = prompt('Inserte el numero de la opcion\n1.Sumar\n2.Restar\n3.Multiplicar\n4.Dividir')
-    operacion = Number(operacion);
-    if (isNaN(operacion)) {
-        alert('Escriba el numero de la opcion')
-        calculadora();
-    }
+    do {
+        alert('Escriba el numero de la opcion\n');
+        let operacion = prompt('Inserte el numero de la opcion\n1.Sumar\n2.Restar\n3.Multiplicar\n4.Dividir')
+        operacion = Number(operacion);
+    } while (isNaN(operacion));
     switch (operacion) {
         case 1:
             total = numeros[0] + numeros[1];
@@ -36,7 +35,7 @@ function calculadora() {
             break;
         case 3:
             total = numeros[0] * numeros[1];
-            alert('El total de la resta es:  ${total}');
+            alert(`El total de la resta es:  ${total}`);
             break;
         default:
             break;
