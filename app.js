@@ -8,12 +8,10 @@ calculadora();
 
 function pedirNumeros() {
     for (let i = 0; i < 2; i++) {
-        numeros[i] = parseInt(prompt('Inserte el numero'));
-        if (isNaN(numeros[i])) {
+        do {
             alert('Ingrese solo numeros');
-            pedirNumeros();
-            return;
-        }
+            numeros[i] = parseInt(prompt('Inserte el numero'));
+        } while (isNaN(numeros[i]));
     }
 }
 
@@ -35,7 +33,11 @@ function calculadora() {
             break;
         case 3:
             total = numeros[0] * numeros[1];
-            alert(`El total de la resta es:  ${total}`);
+            alert(`El total de la multiplicacion es:  ${total}`);
+            break;
+        case 4:
+            total = numeros[0] / numeros[1];
+            alert(`El total de la division es:  ${total}`);
             break;
         default:
             break;
