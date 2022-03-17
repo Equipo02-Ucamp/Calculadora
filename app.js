@@ -6,10 +6,10 @@ let total;
 pedirNumeros();
 calculadora();
 
-function pedirNumeros(){
-    for(let i = 0; i < 2; i++){
+function pedirNumeros() {
+    for (let i = 0; i < 2; i++) {
         numeros[i] = parseInt(prompt('Inserte el numero'));
-        if(isNaN(numeros[i])){
+        if (isNaN(numeros[i])) {
             alert('Ingrese solo numeros');
             pedirNumeros();
             return;
@@ -17,10 +17,10 @@ function pedirNumeros(){
     }
 }
 
-function calculadora(){
+function calculadora() {
     let operacion = prompt('Inserte el numero de la opcion\n1.Sumar\n2.Restar\n3.Multiplicar\n4.Dividir')
     operacion = Number(operacion);
-    if(isNaN(operacion)){
+    if (isNaN(operacion)) {
         alert('Escriba el numero de la opcion')
         calculadora();
     }
@@ -28,13 +28,16 @@ function calculadora(){
         case 1:
             total = numeros[0] + numeros[1];
             alert(`El total de la suma es: ${total}`)
-        break;
+            break;
 
         case 2:
             total = numeros[0] - numeros[1];
             alert(`El total de la resta es: ${total}`)
-        break;
-        
+            break;
+        case 3:
+            total = numeros[0] * numeros[1];
+            alert('El total de la resta es:  ${total}');
+            break;
         default:
             break;
     }
